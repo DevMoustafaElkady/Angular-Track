@@ -1,0 +1,82 @@
+<!-- navbar bootstrap -->
+<!-- <nav class="navbar navbar-expand-md navbar-light bg-light px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img class="logo" src="../../../../assets/logo.png" alt="loogo"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      Menu
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">fly</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Plan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">book</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav dropstart ms-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDarkDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Log - In
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-dark"
+            aria-labelledby="navbarDarkDropdownMenuLink"
+          >
+            <li><a class="dropdown-item" href="#">register</a></li>
+            <li><a class="dropdown-item" href="#">login</a></li>
+            <li><a class="dropdown-item" href="#">Setting</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ -->
+
+<nav class="px-lg-4">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="start" class="bg-info">
+      <img
+        class="logo"
+        src="../../../../assets/logo.png"
+        height="40"
+        class="mr-2"
+      />
+    </ng-template>
+    <ng-template pTemplate="end">
+      <!-- <button
+        pButton
+        label="Logout"
+        icon="pi pi-power-off"
+        (click)="save()"
+      ></button> -->
+    </ng-template>
+  </p-menubar>
+</nav>

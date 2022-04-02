@@ -1,0 +1,15 @@
+.container {
+  nav {
+    .logo {
+      width: 50% !important;
+    }
+
+    ul {
+      .nav-item {
+        .nav-link {
+          color: black !important;
+        }
+      }
+    }
+  }
+}
