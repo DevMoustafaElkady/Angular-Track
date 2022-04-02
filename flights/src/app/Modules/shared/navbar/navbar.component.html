@@ -1,19 +1,5 @@
-<!-- <div class="navbar">
-  <div class="container">
-    <a class="logo" href="#">
-      <img src="../../../../assets/logo.png" alt="" />
-    </a>
-    <nav>
-      <ul>
-
-      </ul>
-    </nav>
-  </div>
-</div>
-
- -->
-
-<nav class="navbar navbar-expand-md navbar-light bg-light px-4">
+<!-- navbar bootstrap -->
+<!-- <nav class="navbar navbar-expand-md navbar-light bg-light px-4">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img class="logo" src="../../../../assets/logo.png" alt="loogo"
@@ -71,4 +57,26 @@
       </ul>
     </div>
   </div>
+</nav>
+ -->
+
+<nav class="px-lg-4">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="start" class="bg-info">
+      <img
+        class="logo"
+        src="../../../../assets/logo.png"
+        height="40"
+        class="mr-2"
+      />
+    </ng-template>
+    <ng-template pTemplate="end">
+      <!-- <button
+        pButton
+        label="Logout"
+        icon="pi pi-power-off"
+        (click)="save()"
+      ></button> -->
+    </ng-template>
+  </p-menubar>
 </nav>

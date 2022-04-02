@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { AccordionModule } from 'primeng/accordion';
 import { MenuModule } from 'primeng/menu';
 import { SplitButtonModule } from 'primeng/splitbutton';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { MenubarModule } from 'primeng/menubar';
 
 const primeng = [
   ButtonModule,
@@ -16,6 +18,8 @@ const primeng = [
   MenuModule,
   AccordionModule,
   SplitButtonModule,
+  InputNumberModule,
+  MenubarModule,
 ];
 
 @NgModule({
