@@ -4,16 +4,38 @@
   box-sizing: border-box;
 }
 
-nav {
-  border: 1px solid #dee2e6;
 
-  .p-element {
-    .p-menubar {
-      border: none;
-    }
-    p-menubarsub.p-element {
-      width: 70% !important;
-      margin: auto !important;
+// eidt buttn nav bar
+.p-menubar .p-menubar-button {
+
+  justify-content: flex-end;
+  width: 100% !important;
+
+  &:focus{
+    box-shadow:none ;
+    outline: none !important;
+  }
+  &:hover{
+    background: transparent;
+
+  }
+
+
+}
+@media screen and (min-width:992px) {
+  nav {
+    border: 1px solid #dee2e6;
+
+    .p-element {
+      .p-menubar {
+        border: none;
+      }
+      p-menubarsub.p-element {
+        width: 70% !important;
+        margin: auto !important;
+      }
     }
   }
+
 }
+
