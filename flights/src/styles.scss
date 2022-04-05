@@ -5,7 +5,7 @@
 }
 
 
-// eidt buttn nav bar
+// eidt buttn nav
 .p-menubar .p-menubar-button {
 
   justify-content: flex-end;
@@ -22,19 +22,22 @@
 
 
 }
+
+
 @media screen and (min-width:992px) {
   nav {
     border: 1px solid #dee2e6;
 
-    .p-element {
       .p-menubar {
         border: none;
       }
       p-menubarsub.p-element {
-        width: 70% !important;
-        margin: auto !important;
+            width: 64% !important;
+      margin-left: auto !important;
+      .p-menuitem{
+        left: 18%;
       }
-    }
+      }
   }
 
 }

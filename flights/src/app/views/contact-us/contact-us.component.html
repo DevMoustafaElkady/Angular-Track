@@ -1,0 +1,343 @@
+<section class="py-5">
+  <div class="container">
+    <div class="row py-5 shadow-lg contact">
+      <div class="offset-lg-1 col-lg-3 parent-customer">
+        <div class="pt-5">
+          <h4>SUPPORT 24/7</h4>
+          <h5 class="py-2">Customer Services Center</h5>
+          <p>
+            Supporting customers all related matters to the booking processing,
+            quotation, booking status, after-sales service.
+          </p>
+        </div>
+        <div class="customer">
+          <div>
+            <img
+              src="../../.././assets/icon-phone-24-1627366890.png"
+              alt="icon-phone"
+            />
+          </div>
+          <div>
+            <div>
+              <div>
+                <p>Phone Number :</p>
+                <p>
+                  <img
+                    src="../../.././assets/flag-us-1639538519.png"
+                    alt="flag-us"
+                  />
+                  <a href="tel:+1 949 864 6017 "> +1 949 864 6017 </a>
+                </p>
+              </div>
+            </div>
+            <div>
+              <p>
+                Email :
+                <a href="mailto:support@travelner.com ">
+                  support@travelner.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="goup-com">
+          <h5>
+            Travelner LLC - a Travelner™ Group of Companies
+          </h5>
+          <ul>
+            <li>
+           phone :
+              <a href="tel:+1 949 864 6017 "> +1 949 864 6017 </a>
+            </li>
+            <li>
+              Email :
+              <a href="mailto:support@travelner.com ">
+                support@travelner.com</a
+              >
+            </li>
+            <li>Address: 19900 MacArthur Boulevard, Suite 1190, Irvine, CA 92612</li>
+            <li>Working hours: 9 AM - 6 PM GMT-8 (Mon – Fri)</li>
+          </ul>
+          <h5>Chat now</h5>
+          <ul class="chat ">
+            <li> <a href="https://api.whatsapp.com/send?phone=01022661780" target="_blank"> <img src="../../../assets/icon-whatsapp-1567475896.svg" alt="icon-whatsapp" > <span class="ChatWhatsapp">
+              +01022661780
+            </span></a> </li>
+            <li> <a href="https://api.whatsapp.com/send?phone=01022661780" target="_blank"> <img src="../../../assets/icon-telegram-1636174066.svg" alt="icon-telegram"> <span class="Chattelegram">
+              +01022661780
+            </span></a> </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- start form  -->
+      <div class="col-lg-7 ms-4 shadow">
+        <h1 class="text-center pt-5">Contact Us</h1>
+        <p>
+          <img
+            src="../../.././assets/icon-security-on-1627367035.svg"
+            alt="icon-security"
+          />
+          All information entered on this form will be kept strictly
+          confidential and subject to our
+          <a>privacy policy</a>once received by us. Your transaction will be
+          secured using
+          <span class="fw-bold">SSL/TLS encryption.</span>
+        </p>
+        <form [formGroup]="contact" (ngSubmit)="formContact()">
+          <div class="d-flex">
+            <div class="w-100 me-3">
+              <label for="last_name d-block"> First Name</label>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"
+                  >{{ title }} \
+                </span>
+                <input
+                  [class.is-valid]="
+                    contact.get('first_name')?.status == 'VALID'
+                  "
+                  formControlName="first_name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Username"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+              <!--  invalid-feedback validation first_name"-->
+              <div
+                *ngIf="
+                  contact.get('first_name')?.errors &&
+                  contact.get('first_name')?.touched
+                "
+                class="alert alert-danger p-1"
+              >
+                <p *ngIf="contact.get('first_name')?.errors?.['required']">
+                  first Name required
+                </p>
+                <p *ngIf="contact.get('first_name')?.errors?.['minlength']">
+                  first Name minLength is 3
+                </p>
+                <p *ngIf="contact.get('first_name')?.errors?.['maxlength']">
+                  first Name maxLength is 22
+                </p>
+              </div>
+            </div>
+
+            <div class="w-100">
+              <label for="last_name"> Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                [class.is-valid]="contact.get('last_name')?.status == 'VALID'"
+                formControlName="last_name"
+              />
+
+              <!--  invalid-feedback validation  Last Name -->
+
+              <div
+                *ngIf="
+                  contact.get('last_name')?.errors &&
+                  contact.get('last_name')?.touched
+                "
+                class="alert alert-danger p-1"
+              >
+                <p *ngIf="contact.get('last_name')?.errors?.['required']">
+                  last name required
+                </p>
+                <p *ngIf="contact.get('last_name')?.errors?.['minlength']">
+                  last name minLength is 3
+                </p>
+                <p *ngIf="contact.get('last_name')?.errors?.['maxlength']">
+                  last name maxLength is 22
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="email"> email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              [class.is-valid]="contact.get('email')?.status == 'VALID'"
+              formControlName="email"
+            />
+
+            <!--  invalid-feedback validation  email -->
+
+            <div
+              *ngIf="
+                contact.get('email')?.errors && contact.get('email')?.touched
+              "
+              class="alert alert-danger p-1"
+            >
+              <p *ngIf="contact.get('email')?.errors?.['required']">
+                email required
+              </p>
+              <p *ngIf="contact.get('email')?.errors?.['email']">
+                email is valid
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="d-flex justify-content-between">
+              <label for="phone"> Choose</label>
+              <label for="phone"> phone number</label>
+            </div>
+
+            <div class="input-group">
+              <select
+                class="select-num"
+                name="status"
+                required
+                formControlName="choose"
+              >
+                <option
+                  *ngFor="let item of this._DataService.countries"
+                  [value]="item.name"
+                >
+                  {{ item.name }} + {{ item.phone }}
+                </option>
+              </select>
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Text input with dropdown button"
+                [class.is-valid]="contact.get('phone')?.status == 'VALID'"
+                formControlName="phone"
+              />
+            </div>
+            <!--  invalid-feedback validation  Phone -->
+            <div
+              *ngIf="
+                contact.get('phone')?.errors && contact.get('phone')?.touched
+              "
+              class="alert alert-danger p-1"
+            >
+              <p *ngIf="contact.get('phone')?.errors?.['required']">
+                Phone required
+              </p>
+              <p *ngIf="contact.get('phone')?.errors?.['minlength']">
+                Phone min is 9
+              </p>
+              <p *ngIf="contact.get('phone')?.errors?.['maxlength']">
+                Phone max is 80
+              </p>
+            </div>
+
+            <!--  invalid-feedback validation  Choose -->
+            <div
+              *ngIf="
+                contact.get('choose')?.errors && contact.get('choose')?.touched
+              "
+              class="alert alert-danger p-1"
+            >
+              <p *ngIf="contact.get('choose')?.errors?.['required']">
+                choose required
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group pt-2">
+            <label for="status"> Please select your nationality: </label>
+            <select
+              class="form-control"
+              name="status"
+              required
+              formControlName="nationalit"
+            >
+              <option value="" disabled selected></option>
+              <option
+                *ngFor="let item of this._DataService.countries"
+                [value]="item.name"
+              >
+                {{ item.name }}
+              </option>
+            </select>
+
+            <!--  invalid-feedback validation  nationalit -->
+            <div
+              *ngIf="
+                contact.get('nationalit')?.errors &&
+                contact.get('nationalit')?.touched
+              "
+              class="alert alert-danger p-1"
+            >
+              <p *ngIf="contact.get('nationalit')?.errors?.['required']">
+                nationalit required
+              </p>
+            </div>
+          </div>
+
+          <div class="d-flex py-2">
+            <div class="" *ngFor="let isGender of Gender">
+              <input
+                formControlName="nation"
+                class="form-check-input"
+                type="radio"
+                name="nation"
+                [id]="isGender.key"
+                [value]="isGender.key"
+                (click)="setGender(isGender.key)"
+              />
+              <label class="form-check-label px-2" [for]="isGender.key">
+                {{ isGender.name }}
+              </label>
+            </div>
+          </div>
+            <!--  invalid-feedback validation  nation-->
+
+          <div
+            *ngIf="
+              contact.get('nation')?.errors && contact.get('nation')?.touched
+            "
+            class="alert alert-danger p-1"
+          >
+            <p *ngIf="contact.get('nation')?.errors?.['required']">
+              nation required
+            </p>
+          </div>
+
+          <div class="">
+            <input class="form-control" type="file" id="formFile" formControlName="file"  name="myImage" accept="image/png, image/gif, image/jpeg">
+              <!--  invalid-feedback validation  Flie-->
+
+              <div
+              *ngIf="
+                contact.get('file')?.errors && contact.get('file')?.touched
+              "
+              class="alert alert-danger p-1"
+            >
+              <p *ngIf="contact.get('file')?.errors?.['required']">
+                file required
+              </p>
+            </div>
+
+          </div>
+          <button
+            [ngStyle]="{
+              'background-color': contact.invalid ? 'grey' : '#0F8BA7',
+              border: contact.invalid ? 'grey' : '0F8BA7'
+            }"
+            [disabled]="contact.invalid"
+            class="btn btn-info mt-3 w-25 ms-lg-auto"
+            type="submit"
+          >
+            <span *ngIf="!isWating">register</span>
+            <span *ngIf="isWating"> wating</span>
+          </button>
+          <div
+            *ngIf="isSuccess"
+            class="text-center p-2 mt-2 w-50 m-auto alert alert-success"
+          >
+            {{ isSuccess }}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
