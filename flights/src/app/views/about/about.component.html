@@ -1,0 +1,133 @@
+<section id="about">
+  <header>
+    <img
+      src="../../../assets/about-header=banner.jpg"
+      alt="abute header banner"
+    />
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-1 col-lg-10 about-us">
+        <div>
+          <h2 class="text-center">About Us</h2>
+          <p>
+            Travelner is a leading travel professional where you can find the
+            best value flight instantly and easily. We offer a wide range of
+            travel services including flight, visa, accommodation, and tours
+            around the globe with the purpose of satisfying all travel needs in
+            one platform. All services can be searched and booked directly
+            online. As an expert in traveling, we understand all insights of our
+            customers, who look for an A-Z booking process, reliable services,
+            and first-class customer care.
+          </p>
+          <p>
+            Come with Travelner, you will be assisted by a team of passionate,
+            experienced, fun-loving people. Our professional team endeavors to
+            make sure that you have all the information and options you need for
+            the best holiday ever.
+          </p>
+          <p>
+            Whether you are well travelled or are looking to plan your dream
+            trip for the first time, Travelner makes it easy to find suitable
+            holidays and the best available deals just for you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parent-aboutus bg-gradient">
+    <h2 class="text-center py-4">Our travel consultants can offer</h2>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="offset-lg-1 col-lg-10"> -->
+        <div
+          style="background: url(../../../assets/bg-flight-right.jpg) no-repeat"
+          class="aboutus-item right"
+        >
+          <div class="aboutus-inner">
+            <div>
+              <h5>Flight</h5>
+              <p>
+                Our widest range of travel means after we find you the best
+                airfare possible we help make your holiday complete
+              </p>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+
+        <!-- <div class="offset-lg-1 col-lg-10"> -->
+        <div
+          class="aboutus-item left"
+          style="background: url(../../../assets/bg-visa-left.jpg) no-repeat"
+        >
+          <div class="aboutus-inner justify-content-end">
+            <div>
+              <h5>Flight</h5>
+              <p>
+                Our widest range of travel means after we find you the best
+                airfare possible we help make your holiday complete
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+
+        <!-- <div class="offset-lg-1 col-lg-10"> -->
+        <div
+          class="aboutus-item right"
+          style="background: url(../../../assets/bg-hotel-end.jpg) no-repeat"
+        >
+          <div class="aboutus-inner">
+            <div>
+              <h5>Flight</h5>
+              <p>
+                Our widest range of travel means after we find you the best
+                airfare possible we help make your holiday complete
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+  <div class="container">
+    <div class="before-fly">
+      <div class="title-header">
+        <h2>BEFORE YOU FLY</h2>
+        <p>
+          Check our Additional Services, brought to you for a better travel
+          experience
+        </p>
+      </div>
+
+      <ul class="links-list">
+        <li *ngFor="let item of experience">
+          <a routerLink="/"
+            ><i [class]="item.icon"></i>
+            <p>{{ item.title }}</p></a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="title-header">
+          <h2>Book flights in just 4 easy steps</h2>
+          <p>Here’s a quick overview of the process, from start to finis</p>
+        </div>
+        <div
+          class="col-lg-3 shadow text-center py-5"
+          *ngFor="let view of overview; let i = index"
+        >
+          <img [src]="'../../../assets/' + view.img" alt="" />
+          <div class="py-3 overview">
+            <h4>{{ 1 + i }} {{ view.title }}</h4>
+            <p>{{ view.overview }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

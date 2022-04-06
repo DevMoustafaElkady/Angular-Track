@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './Modules/shared/shared.module';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './views/about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, ContactUsComponent],
+  declarations: [AppComponent, ContactUsComponent, AboutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -2,73 +2,95 @@
   <div class="container">
     <div class="row py-5 shadow-lg contact">
       <div class="offset-lg-1 col-lg-3 parent-customer">
-        <div class="pt-5">
-          <h4>SUPPORT 24/7</h4>
-          <h5 class="py-2">Customer Services Center</h5>
-          <p>
-            Supporting customers all related matters to the booking processing,
-            quotation, booking status, after-sales service.
-          </p>
-        </div>
-        <div class="customer">
-          <div>
-            <img
-              src="../../.././assets/icon-phone-24-1627366890.png"
-              alt="icon-phone"
-            />
+        <aside>
+          <div class="pt-5">
+            <h4>SUPPORT 24/7</h4>
+            <h5 class="py-2">Customer Services Center</h5>
+            <p>
+              Supporting customers all related matters to the booking
+              processing, quotation, booking status, after-sales service.
+            </p>
           </div>
-          <div>
+          <div class="customer">
+            <div>
+              <img
+                src="../../.././assets/icon-phone-24-1627366890.png"
+                alt="icon-phone"
+              />
+            </div>
             <div>
               <div>
-                <p>Phone Number :</p>
+                <div>
+                  <p>Phone Number :</p>
+                  <p>
+                    <img
+                      src="../../.././assets/flag-us-1639538519.png"
+                      alt="flag-us"
+                    />
+                    <a href="tel:+1 949 864 6017 "> +1 949 864 6017 </a>
+                  </p>
+                </div>
+              </div>
+              <div>
                 <p>
-                  <img
-                    src="../../.././assets/flag-us-1639538519.png"
-                    alt="flag-us"
-                  />
-                  <a href="tel:+1 949 864 6017 "> +1 949 864 6017 </a>
+                  Email :
+                  <a href="mailto:support@travelner.com ">
+                    support@travelner.com</a
+                  >
                 </p>
               </div>
             </div>
-            <div>
-              <p>
+          </div>
+
+          <div class="goup-com">
+            <h6 class="fw-boold">
+              EGYPTAIR LLC - a EGYPTAIR™ Group of Companies
+            </h6>
+            <ul>
+              <li>
+                phone :
+                <a href="tel:+1 949 864 6017 "> +1 949 864 6017 </a>
+              </li>
+              <li>
                 Email :
                 <a href="mailto:support@travelner.com ">
                   support@travelner.com</a
                 >
-              </p>
-            </div>
+              </li>
+              <li>
+                Address: 19900 MacArthur Boulevard, Suite 1190, Irvine, CA 92612
+              </li>
+              <li>Working hours: 9 AM - 6 PM GMT-8 (Mon – Fri)</li>
+            </ul>
+            <h5>Chat now</h5>
+            <ul class="chat">
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=01022661780"
+                  target="_blank"
+                >
+                  <img
+                    src="../../../assets/icon-whatsapp-1567475896.svg"
+                    alt="icon-whatsapp"
+                  />
+                  <span class="ChatWhatsapp"> +01022661780 </span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=01022661780"
+                  target="_blank"
+                >
+                  <img
+                    src="../../../assets/icon-telegram-1636174066.svg"
+                    alt="icon-telegram"
+                  />
+                  <span class="Chattelegram"> +01022661780 </span></a
+                >
+              </li>
+            </ul>
           </div>
-        </div>
-
-        <div class="goup-com">
-          <h5>
-            Travelner LLC - a Travelner™ Group of Companies
-          </h5>
-          <ul>
-            <li>
-           phone :
-              <a href="tel:+1 949 864 6017 "> +1 949 864 6017 </a>
-            </li>
-            <li>
-              Email :
-              <a href="mailto:support@travelner.com ">
-                support@travelner.com</a
-              >
-            </li>
-            <li>Address: 19900 MacArthur Boulevard, Suite 1190, Irvine, CA 92612</li>
-            <li>Working hours: 9 AM - 6 PM GMT-8 (Mon – Fri)</li>
-          </ul>
-          <h5>Chat now</h5>
-          <ul class="chat ">
-            <li> <a href="https://api.whatsapp.com/send?phone=01022661780" target="_blank"> <img src="../../../assets/icon-whatsapp-1567475896.svg" alt="icon-whatsapp" > <span class="ChatWhatsapp">
-              +01022661780
-            </span></a> </li>
-            <li> <a href="https://api.whatsapp.com/send?phone=01022661780" target="_blank"> <img src="../../../assets/icon-telegram-1636174066.svg" alt="icon-telegram"> <span class="Chattelegram">
-              +01022661780
-            </span></a> </li>
-          </ul>
-        </div>
+        </aside>
       </div>
 
       <!-- start form  -->
@@ -289,7 +311,7 @@
               </label>
             </div>
           </div>
-            <!--  invalid-feedback validation  nation-->
+          <!--  invalid-feedback validation  nation-->
 
           <div
             *ngIf="
@@ -303,10 +325,17 @@
           </div>
 
           <div class="">
-            <input class="form-control" type="file" id="formFile" formControlName="file"  name="myImage" accept="image/png, image/gif, image/jpeg">
-              <!--  invalid-feedback validation  Flie-->
+            <input
+              class="form-control"
+              type="file"
+              id="formFile"
+              formControlName="file"
+              name="myImage"
+              accept="image/png, image/gif, image/jpeg"
+            />
+            <!--  invalid-feedback validation  Flie-->
 
-              <div
+            <div
               *ngIf="
                 contact.get('file')?.errors && contact.get('file')?.touched
               "
@@ -316,7 +345,6 @@
                 file required
               </p>
             </div>
-
           </div>
           <button
             [ngStyle]="{
