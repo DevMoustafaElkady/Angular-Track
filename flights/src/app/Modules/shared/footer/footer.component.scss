@@ -1,16 +1,17 @@
 ul {
   list-style: none;
   font-size: 0.8em;
-  padding: 0;
+  padding: none;
   a {
     text-decoration: none;
     color: white;
   }
 }
-footer {
+footer#footer-one {
+  display: none;
   color: #fff;
   padding: 3em 0;
-  margin: 1em 0;
+  margin-top: 1em;
   background: #00243c;
 
   .secures {
@@ -55,7 +56,7 @@ footer {
       background-image: url(../../../../assets/icon-arrow-right-small-v2.svg);
       background-repeat: no-repeat;
       padding-left: 15px;
-      background-position: top 15px left;
+      background-position: top 5px left;
     }
   }
   .follow {
@@ -70,24 +71,27 @@ footer {
 }
 
 h3 {
-  padding: 0.1em 0 0.2em;
+  padding-left: 1.4em;
+  padding-top: 1em;
   font-size: 1em;
   text-transform: uppercase;
 }
 
-@media only screen and(min-width:768px) {
+@media only screen and(min-width:990px) {
   .logo-footer {
     padding: 1.5em 0.5em !important;
     .logo {
       width: 50% !important;
     }
   }
-  h3 {
-    padding: 0;
-    font-size: 1.2em;
+
+  ul.footer-nav-info {
+    li {
+      background-position: top 15px left !important;
+    }
   }
   ul {
-    font-size: 1em;
+    font-size: 0.9em;
     li {
       padding: 0.3em 0;
     }
@@ -95,6 +99,186 @@ h3 {
   .follow {
     img {
       width: 60% !important;
+    }
+  }
+}
+
+//  footer tow
+
+#footerFacelift {
+  background: #041571;
+  color: white;
+  margin-top: 3em;
+
+  .newsLetterFaceLift {
+    background-image: url(../../../../assets/nwesLetterCoverPhoto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 165px 0px 570px;
+    position: relative;
+    top: -40px;
+    margin-top: 1em;
+
+    .title-holder {
+      h2 {
+        color: #000;
+      }
+      a.btn {
+        background: #16267a;
+        color: #fff;
+
+
+      }
+    }
+
+    .followUsHolder {
+      ul.follow {
+        display: flex;
+        align-items: center;
+        padding: none;
+        li {
+          padding: 0.5em;
+
+          a {
+            color: #1a272e;
+            font-size: 1.1em;
+            background-color: rgba(224, 237, 245, 0.9);
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            transition: .3s;
+            &:hover{
+              color: white;
+              background: #041571;
+
+              }
+          }
+        }
+      }
+    }
+    &::before {
+      content: "";
+      background-image: url(../../../../assets/figNewsletterr.png);
+      position: absolute;
+      width: 240px;
+      height: 325px;
+      top: 3%;
+      left: -6%;
+    }
+  }
+  .footerNav {
+    background: linear-gradient(180deg, transparent 0, #041571 40%);
+    margin-top: -340px;
+    position: relative;
+    .header-li {
+      text-align: center;
+      margin-right: 2em;
+      a {
+        font-size: 1.2em;
+        text-transform: capitalize;
+      }
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &::before {
+      content: "";
+      background-image: url(../../../../assets/figFooter.png);
+      position: absolute;
+
+      width: 144px;
+      height: 412px;
+      top: 35px;
+      right: 10px;
+    }
+  }
+
+  .mobile-app {
+    .container {
+      border-top: 2px solid white;
+    }
+    h2 {
+      padding: 1em 0;
+    }
+    .ul-mbile {
+      display: flex;
+      align-items: center;
+      li {
+        img {
+          width: 100%;
+        }
+      }
+      .stars {
+        background: #16267a;
+        padding: 1.2em 2.8em 1.2em 0.8em;
+        margin-left: 1em;
+        border-radius: 10px;
+        li {
+          padding-left: 0.5em;
+        }
+
+        h4 {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+
+  .reserved {
+    .row {
+      padding: 1em 0;
+      border-top: 2px solid white;
+
+      .link-privace {
+        a {
+          text-decoration: none;
+          padding: 0.5em 0.5em;
+          color: white;
+        }
+        .site-h {
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+        }
+      }
+      img{
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width:768px) {
+  .footerNav {
+    ul {
+      padding: 0;
+      font-size: 1em;
+    }
+    .ul-layout-ul-footer-list {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .header-li {
+      padding-bottom: 0.8em;
+    }
+    .ul-footer-list {
+      display: none;
+    }
+    .list-end {
+      display: block !important;
+    }
+  }
+  .stars {
+    padding: 1em 1.8em 1em 0.8em !important;
+    }
+      .reserved{
+    img{
+      width: 50%!important;
     }
   }
 }

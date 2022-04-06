@@ -1,15 +1,25 @@
-.container {
-  nav {
-    .logo {
-      width: 50% !important;
-    }
+// .container {
+//   nav {
 
-    ul {
-      .nav-item {
-        .nav-link {
-          color: black !important;
-        }
-      }
-    }
-  }
+//     .logo {
+//       width: 50% !important;
+//     }
+
+//     ul {
+//       .nav-item {
+//         .nav-link {
+//           color: black !important;
+//         }
+//       }
+//     }
+//   }
+// }
+
+nav{
+  position: fixed !important;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+
+
 }
