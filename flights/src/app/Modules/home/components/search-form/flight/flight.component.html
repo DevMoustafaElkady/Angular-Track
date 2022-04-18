@@ -1,0 +1,158 @@
+<div class="pb-2">
+  <span class="p-1 bg-primary rounded-pill">One Way </span>
+  <span class="p-1 m-2 bg-primary rounded-pill">One Way </span>
+</div>
+<form>
+  <div class="row">
+    <div class="col-lg-5 col-sm-12 boreder-e">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 boreder-e">
+          <span>Going To</span>
+          <div class="input-gr">
+            <i class="pi pi-map-marker fa-3x"></i>
+
+            <input type="text" class="form-control" placeholder="origin" />
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <span>To</span>
+          <div class="input-gr">
+            <i class="pi pi-map-marker fa-3x"></i>
+
+            <input type="text" class="form-control" placeholder="Destination" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-sm-12 boreder-e">
+      <span>Departure</span>
+      <div class="input-gr">
+        <i class="fas fa-calendar-days"></i>
+        <input
+          type="text"
+          placeholder="Daterangepicker"
+          class="form-control"
+          bsDaterangepicker
+          [bsConfig]="{ isAnimated: true }"
+        />
+      </div>
+    </div>
+    <div class="parent-input room col-lg-3 col-sm-12">
+      <h5>Travelers</h5>
+
+      <div
+        class="btn-group w-100"
+        dropdown
+        [autoClose]="false"
+        container="body"
+      >
+        <div>
+          <i class="fas fa-restroom fa-2x"></i>
+          <span class="ps-1">
+            <span>{{ total }} </span> Travelers , 1 Room
+          </span>
+          <!-- <span class="caret"> </span> -->
+        </div>
+        <button
+          id="button-nested"
+          dropdownToggle
+          type="button"
+          class="btn btn- px-1 ms-2"
+          aria-controls="dropdown-nested"
+        >
+          <i class="fas fa-angle-down ps-4"></i>
+        </button>
+        <ul
+          id="dropdown-nested"
+          *dropdownMenu
+          role="menu"
+          aria-labelledby="button-nested"
+          class="w-100 bg-white dropdown-menu"
+        >
+          <li role="menuitem">
+            <h5 class="title-room">Room</h5>
+            <ul class="p-2">
+              <li class="d-flex justify-content-between" role="menuitem">
+                <p>Adult (12)</p>
+
+                <div class="btn-group">
+                  <button
+                    class="btn btn-primary btn-minus"
+                    (click)="oncountersChanged('minus')"
+                    type="button"
+                    [disabled]="total <= 1"
+                  >
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <span class="px-2">{{ count }}</span>
+                  <button
+                    type="button"
+                    (click)="oncountersChanged('plus')"
+                    [disabled]="total >= 8"
+                    class="btn-plus btn btn-primary"
+                  >
+                    <span class="fas fa-plus"></span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="d-flex justify-content-between pe-1" role="menuitem">
+            <p>Children ( 2y to 11y )</p>
+
+            <div>
+              <button
+                class="btn-minus btn btn-primary"
+                (click)="oncountersChildren('minus')"
+                type="button"
+                [disabled]="total <= 1 || children == 0"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <span class="px-2">{{ children }}</span>
+
+              <button
+                type="button"
+                (click)="oncountersChildren('plus')"
+                [disabled]="total >= 8"
+                class="btn-plus btn btn-primary"
+              >
+                <span class="fas fa-plus"></span>
+              </button>
+            </div>
+          </li>
+          <li class="d-flex justify-content-between pe-1" role="menuitem">
+            <p>Children ( 2y to 11y )</p>
+
+            <div>
+              <button
+                class="btn-minus btn btn-primary"
+                (click)="oncountersChildren('minus')"
+                type="button"
+                [disabled]="total <= 1 || children == 0"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <span class="px-2">{{ children }}</span>
+
+              <button
+                type="button"
+                (click)="oncountersChildren('plus')"
+                [disabled]="total >= 8"
+                class="btn-plus btn btn-primary"
+              >
+                <span class="fas fa-plus"></span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-1 col-sm-12 btn-search">
+      <button type="submit" class="btn text-white py-3 btn-warning">
+        <i class="fab fa-searchengin fa-3x"></i>
+      </button>
+    </div>
+  </div>
+</form>

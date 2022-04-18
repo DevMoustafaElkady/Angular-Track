@@ -1,1 +1,23 @@
-<p>search-form works!</p>
+<div class="m-5"></div>
+
+<section id="search-box">
+  <div class="container">
+    <!-- title box -->
+    <div class="header-box">
+      <h1>Your new travel mate</h1>
+      <h3>Book Hotels & Flights at The Best price.</h3>
+    </div>
+    <div class="card">
+      <p-tabView>
+        <p-tabPanel header="Hotels">
+          <!-- Form booking hotel -->
+          <app-hotel></app-hotel>
+        </p-tabPanel>
+        <p-tabPanel header="Flighs">
+          <!-- Form booking flight-->
+          <app-flight></app-flight>
+        </p-tabPanel>
+      </p-tabView>
+    </div>
+  </div>
+</section>

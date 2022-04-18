@@ -1,0 +1,203 @@
+:host ::ng-deep .card {
+  border: none;
+  background-color: transparent;
+  .p-tabview {
+    .p-tabview-panels {
+      background-color: rgba(33, 37, 41, 0.3);
+      color: white;
+      padding: 2em;
+    }
+    .p-tabview-nav-container {
+      margin-top: 0.3em;
+      background-color: rgba(33, 37, 41, 0.3);
+      border-radius: 5px;
+      // width: fit-content;
+      display: inline-block;
+      padding: 0.5em;
+
+      .p-tabview-nav {
+        background: transparent;
+        border: none;
+        li {
+          &:hover {
+            background: none;
+          }
+
+          .p-tabview-nav-link {
+            background: transparent;
+            margin: 0 1em;
+            border: none;
+            color: #fff;
+            padding: 0.5em 1em;
+            &:focus {
+              background: #ae449c;
+
+              border: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .p-tabview .p-tabview-nav li .p-tabview-nav-link
+
+#search-box {
+  .header-box {
+    text-align: center;
+    padding-bottom: 2em;
+    h1,
+    h3 {
+      color: white;
+    }
+  }
+  form {
+    background: #fff;
+    color: #949494;
+    display: flex;
+    h6 {
+      padding: 0.7em 2em 0;
+    }
+
+    .room {
+      position: relative;
+      z-index: 10;
+
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        right: -20%;
+        left: -20%;
+        background: #fff;
+        // padding: 0 1em;
+        h5.title-room {
+          background: #ddd;
+          padding: 0.7em 0;
+        }
+        .btn-count {
+          color: white;
+          border-radius: 2px;
+          padding: 0.1em 0.5em;
+          border: none;
+        }
+        .btn-plus {
+          background: #ae449c;
+        }
+        .btn-minus {
+          background: #767676;
+        }
+        ul {
+          display: flex;
+          list-style: none;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          padding: 0;
+          .drop-child {
+            margin-top: 0.3em;
+            li {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    // justify-content: space-between;
+  }
+}
+.parent-input {
+  width: 31%;
+  border-right: 1px solid #949494;
+  .p-input-icon-left {
+    width: 100%;
+    input {
+      width: 100%;
+      border: none !important;
+      &:hover,
+      &:enabled:focus {
+        border: none !important;
+        box-shadow: none;
+      }
+    }
+  }
+  .p-calend {
+    //  icon
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .calend {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and(max-width:992px) {
+  #search-box {
+    .header-box {
+      text-align: center;
+      padding-bottom: 1em;
+      font-size: 1.2em;
+      h1,
+      h3 {
+        color: white;
+      }
+    }
+    form {
+      background: transparent;
+      color: white;
+      display: block;
+
+      .room {
+        .heder-drop {
+          h5 {
+            color: white !important;
+          }
+        }
+        .dropdown {
+          right: -3%;
+          left: -3%;
+          color: #767676;
+          border-bottom: 2px solid #ddd;
+
+          h5.title-room {
+            padding: 0.7em;
+          }
+
+          ul {
+            display: block;
+            .drop-child {
+              display: flex;
+              li {
+                font-size: 0.8em;
+              }
+            }
+          }
+        }
+      }
+      .btn-submit {
+        text-align: center;
+        .btn {
+          padding: 0.3em 3em;
+          i {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+  }
+
+  .parent-input {
+    width: 100%;
+    border-right: none;
+    input {
+      border: 3px solid transparent;
+      &:hover,
+      &:enabled:focus {
+        border: 3px solid lightblue;
+      }
+    }
+  }
+}
