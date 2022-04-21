@@ -1,0 +1,123 @@
+<form [formGroup]="hotel" (submit)="getFormData(hotel)">
+  <div class="row">
+    <div class="col-lg-3 col-sm-12 boreder-e">
+      <span>Search</span>
+      <div class="input-gr">
+        <i class="pi pi-map-marker fa-3x"></i>
+
+        <input
+          type="text"
+          class="form-control"
+          placeholder="origin"
+          formControlName="search"
+        />
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-12 boreder-e">
+      <span>Departure</span>
+      <div class="input-gr">
+        <i class="fas fa-calendar-days"></i>
+        <input
+          class="form-control"
+          #drp="bsDaterangepicker"
+          bsDaterangepicker
+          [(ngModel)]="bsRangeValue"
+          formControlName="calendar"
+        />
+      </div>
+    </div>
+    <div class="parent-input room col-lg-4 col-sm-12 position-relative">
+      <h5>Travelers</h5>
+
+      <div>
+        <div (click)="isdropping = !isdropping">
+          <i class="fas fa-restroom fa-2x"></i>
+          <span class="ps-1">
+            <span>{{ total }} </span> Travelers , 1 Room
+          </span>
+          <i class="fas fa-angle-down text-dark"></i>
+        </div>
+
+        <ul *ngIf="isdropping" class="bg-white drop py-3">
+          <li role="menuitem">
+            <h5 class="title-room">Room</h5>
+            <ul class="p-2">
+              <li class="d-flex justify-content-between" role="menuitem">
+                <p>Adult (12)</p>
+
+                <div class="btn-group">
+                  <button
+                    class="btn btn-primary btn-minus"
+                    (click)="oncountersChanged('minus')"
+                    type="button"
+                    [disabled]="total <= 1 || count == 1"
+                  >
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <span class="px-2">{{ count }}</span>
+                  <button
+                    type="button"
+                    (click)="oncountersChanged('plus')"
+                    [disabled]="total >= 8"
+                    class="btn-plus btn btn-primary"
+                  >
+                    <span class="fas fa-plus"></span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="d-flex justify-content-between pe-1" role="menuitem">
+            <p>Children ( 2y to 11y )</p>
+
+            <div>
+              <button
+                class="btn-minus btn btn-primary"
+                (click)="oncountersChildren('minus')"
+                type="button"
+                [disabled]="total <= 1 || children == 0"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <span class="px-2">{{ children }}</span>
+
+              <button
+                type="button"
+                (click)="oncountersChildren('plus')"
+                [disabled]="total >= 8"
+                class="btn-plus btn btn-primary"
+              >
+                <span class="fas fa-plus"></span>
+              </button>
+            </div>
+          </li>
+          <li
+            role="menuitem"
+            class="nav-item drop-child"
+            *ngFor="let child of childrens; let i = index"
+          >
+            <p class="p-2">Child : {{ i + 1 }}</p>
+
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              formControlName="selected"
+            >
+              <option *ngFor="let item of cities" value="1">
+                {{ item.name }}
+              </option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <!-- -************************* -->
+    </div>
+    <div class="col-lg-1 col-sm-12 btn-search">
+      <button type="submit" class="btn text-white py-3 btn-warning">
+        <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+      </button>
+    </div>
+  </div>
+</form>

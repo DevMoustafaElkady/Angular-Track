@@ -1,0 +1,73 @@
+:host ::ng-deep .card {
+  border: none;
+  background-color: transparent;
+  .p-tabview {
+    .p-tabview-panels {
+      background-color: rgba(33, 37, 41, 0.3);
+      color: white;
+      padding: 1em;
+    }
+    .p-tabview-nav-container {
+      margin-top: 0.3em;
+      background-color: rgba(33, 37, 41, 0.3);
+      border-radius: 5px;
+      // width: fit-content;
+      display: inline-block;
+      padding: 0.5em;
+
+      .p-tabview-nav {
+        background: transparent;
+        border: none;
+        li {
+          &:hover {
+            background: none;
+          }
+
+          .p-tabview-nav-link {
+            background: transparent;
+            margin: 0 1em;
+            border: none;
+            color: #fff;
+            padding: 0.5em 1em;
+            &:focus {
+              background: #ae449c;
+
+              border: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .p-tabview .p-tabview-nav li .p-tabview-nav-link
+
+#search-box {
+  padding: 100px 0;
+  width: 100%;
+  .header-box {
+    text-align: center;
+    padding-bottom: 2em;
+    h1,
+    h3 {
+      color: white;
+    }
+  }
+}
+
+@media only screen and(max-width:992px) {
+  #search-box {
+    .header-box {
+      text-align: center;
+      padding-bottom: 1em;
+      font-size: 1.2em;
+      h1,
+      h3 {
+        font-size: 1.2em;
+        color: white;
+      }
+    }
+  }
+}

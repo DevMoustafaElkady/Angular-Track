@@ -1,0 +1,172 @@
+<div class="pb-2">
+  <p-selectButton
+    [options]="stateOptions"
+    [(ngModel)]="value1"
+    optionLabel="label"
+    optionValue="value"
+    (onChange)="onChange($event)"
+  ></p-selectButton>
+  <!-- <span
+    [class.grey]="isClick_one"
+    class="p-1 rounded-pill"
+    (click)="isClick_one = !isClick"
+    >One Way
+  </span>
+  <span
+    [class.grey]="isClick"
+    (click)="isClick = !isClick_one"
+    class="p-1 m-2 bg- rounded-pill test"
+    >One Way
+  </span> -->
+</div>
+<form>
+  <div class="row">
+    <div class="col-lg-5 col-sm-12 boreder-e">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 boreder-e">
+          <span>Going To</span>
+          <div class="input-gr">
+            <i class="pi pi-map-marker fa-3x"></i>
+
+            <input type="text" class="form-control" placeholder="origin" />
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <span>To</span>
+          <div class="input-gr">
+            <i class="pi pi-map-marker fa-3x"></i>
+
+            <input type="text" class="form-control" placeholder="Destination" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!displayCalendar" class="col-lg-3 col-sm-12 boreder-e">
+      <span class="ps-4"> Departure</span>
+      <div class="input-gr">
+        <i class="fas fa-calendar-days"></i>
+
+        <input
+          type="text"
+          class="form-control"
+          #dp="bsDatepicker"
+          bsDatepicker
+          [bsValue]="bsValue"
+        />
+      </div>
+    </div>
+    <div *ngIf="displayCalendar" class="col-lg-3 col-sm-12 boreder-e">
+      <div class="d-flex justify-content-lg-around">
+        <span class="px-4">Departure</span> <span>Return</span>
+      </div>
+      <div class="input-gr">
+        <i class="fas fa-calendar-days"></i>
+        <input
+          class="form-control"
+          #drp="bsDaterangepicker"
+          bsDaterangepicker
+          [(ngModel)]="bsRangeValue"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </div>
+    </div>
+
+    <div class="parent-input room col-lg-3 col-sm-12 position-relative">
+      <h5>Travelers</h5>
+
+      <div>
+        <div (click)="isdropping = !isdropping">
+          <i class="fas fa-restroom fa-2x"></i>
+          <span class="ps-1">
+            <span>{{ total }} </span> Travelers , 1 Room
+          </span>
+          <i class="fas fa-angle-down text-dark"></i>
+        </div>
+
+        <ul *ngIf="isdropping" class="bg-white drop py-3">
+          <li role="menuitem">
+            <h5 class="title-room">Room</h5>
+            <ul class="p-2">
+              <li class="d-flex justify-content-between" role="menuitem">
+                <p>Adult (12)</p>
+
+                <div class="btn-group">
+                  <button
+                    class="btn btn-primary btn-minus"
+                    (click)="oncountersChanged('minus')"
+                    type="button"
+                    [disabled]="total <= 1 || count == 1"
+                  >
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <span class="px-2">{{ count }}</span>
+                  <button
+                    type="button"
+                    (click)="oncountersChanged('plus')"
+                    [disabled]="total >= 8"
+                    class="btn-plus btn btn-primary"
+                  >
+                    <span class="fas fa-plus"></span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="d-flex justify-content-between pe-1" role="menuitem">
+            <p>Children ( 2y to 11y )</p>
+
+            <div>
+              <button
+                class="btn-minus btn btn-primary"
+                (click)="oncountersChildren('minus')"
+                type="button"
+                [disabled]="total <= 1 || children == 0"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <span class="px-2">{{ children }}</span>
+
+              <button
+                type="button"
+                (click)="oncountersChildren('plus')"
+                [disabled]="total >= 8"
+                class="btn-plus btn btn-primary"
+              >
+                <span class="fas fa-plus"></span>
+              </button>
+            </div>
+          </li>
+          <li class="d-flex justify-content-between pe-1" role="menuitem">
+            <p>Infant On Lap( Under 2 Yrs )</p>
+
+            <div>
+              <button
+                class="btn-minus btn btn-primary"
+                (click)="oncountersInfant('minus')"
+                type="button"
+                [disabled]="total <= 1 || Infant == 0"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <span class="px-2">{{ Infant }}</span>
+
+              <button
+                type="button"
+                (click)="oncountersInfant('plus')"
+                [disabled]="total >= 8"
+                class="btn-plus btn btn-primary"
+              >
+                <span class="fas fa-plus"></span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-1 col-sm-12 btn-search">
+      <button type="submit" class="btn text-white py-3 btn-warning">
+        <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+      </button>
+    </div>
+  </div>
+</form>

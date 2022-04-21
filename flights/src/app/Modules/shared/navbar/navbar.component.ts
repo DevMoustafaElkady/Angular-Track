@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+
+import { City } from 'src/app/interface/city';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,14 +8,24 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavbarComponent implements OnInit {
   constructor() {}
+  selectedCity3: string = '';
 
-  items: MenuItem[] = [];
+  cities: City[] = [];
+  islanguag: boolean = true;
+
   save() {
-    console.log(0);
-    console.log(11);
+    console.log('test');
   }
   ngOnInit() {
-    this.items = [
+    this.cities = [
+      { name: 'New York' },
+      { name: 'Rome' },
+      { name: 'London' },
+      { name: 'Istanbul' },
+      { name: 'Paris' },
+    ];
+
+    /*this.items = [
       {
         // style: { border: '2px solid red' }, add style item
         label: 'Flights',
@@ -34,7 +45,7 @@ export class NavbarComponent implements OnInit {
         routerLink: '/',
       },
       {
-        label: 'Blog',
+      label: 'Blog',
         routerLink: '/',
       },
       {
@@ -52,6 +63,6 @@ export class NavbarComponent implements OnInit {
           { label: 'Log -Out', icon: ' pi pi-sign-out text-danger' },
         ],
       },
-    ];
+   ]; */
   }
 }

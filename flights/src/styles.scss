@@ -3,42 +3,43 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+ul {
+  list-style-type: none !important;
+}
 
 // eidt buttn nav
 .p-menubar .p-menubar-button {
-
   justify-content: flex-end;
   width: 100% !important;
 
-  &:focus{
-    box-shadow:none ;
+  &:focus {
+    box-shadow: none;
     outline: none !important;
   }
-  &:hover{
+  &:hover {
     background: transparent;
-
   }
-
-
 }
 
-
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   nav {
     border: 1px solid #dee2e6;
 
-      .p-menubar {
-        border: none;
-      }
-      p-menubarsub.p-element {
-            width: 64% !important;
+    .p-menubar {
+      border: none;
+    }
+    p-menubarsub.p-element {
+      width: 64% !important;
       margin-left: auto !important;
-      .p-menuitem{
+      .p-menuitem {
         left: 18%;
       }
-      }
+    }
   }
-
 }
 
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

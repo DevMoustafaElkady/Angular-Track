@@ -1,25 +1,35 @@
-// .container {
-//   nav {
+nav {
+  background: white;
+  padding: 0 !important;
+  .container {
+    .logo {
+      width: 160px !important;
+      a {
+        .img-logo {
+          max-width: 160px !important;
+        }
+      }
+    }
 
-//     .logo {
-//       width: 50% !important;
-//     }
-
-//     ul {
-//       .nav-item {
-//         .nav-link {
-//           color: black !important;
-//         }
-//       }
-//     }
-//   }
-// }
-
-nav{
-  position: fixed !important;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-
-
+    ul {
+      .nav-item {
+        .nav-link {
+          color: #272d59;
+          font-size: 14px;
+          padding-left: 10px;
+          font-weight: 500;
+        }
+        .btn-nav {
+          border: 1px solid #ae449c;
+          background-color: transparent;
+          color: #ae449c;
+          margin-left: 0.4em;
+        }
+      }
+    }
+  }
+}
+:host ::ng-deep .p-dropdown {
+  background: transparent;
+  border: none;
 }

@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './views/about/about.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, ContactUsComponent, AboutComponent],
@@ -17,7 +18,8 @@ import { AboutComponent } from './views/about/about.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
