@@ -1,8 +1,10 @@
 form {
   color: #949494 !important;
+  // padding: 0;
   padding-left: 1em;
   background: white;
   border-radius: 7px;
+  font-size: 0.9em;
 
   .input-gr {
     display: flex;
@@ -47,6 +49,21 @@ form {
       padding: 0.3em 3em;
       i {
         font-size: 2em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .parent-input {
+    .drop {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: -20%;
+      button {
+        padding: 0.3em;
       }
     }
   }

@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   selectedCity3: string = '';
 
   cities: City[] = [];
-  islanguag: boolean = false;
+  islanguag: boolean = true;
 
   save() {
     console.log('test');

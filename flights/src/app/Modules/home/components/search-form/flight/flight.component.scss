@@ -3,6 +3,7 @@ form {
   padding-left: 1em;
   background: white;
   border-radius: 7px;
+  font-size: 0.9em;
   .input-gr {
     display: flex;
     align-items: center;
@@ -46,6 +47,25 @@ form {
       padding: 0.3em 3em;
       i {
         font-size: 2em;
+      }
+    }
+  }
+}
+
+.grey {
+  background-color: #9593bd !important;
+}
+
+@media only screen and (min-width: 992px) {
+  .parent-input {
+    .drop {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: -20%;
+      button {
+        padding: 0.3em;
       }
     }
   }

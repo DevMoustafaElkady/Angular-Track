@@ -8,7 +8,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class HotelComponent implements OnInit {
   isdropping: boolean = false;
-  rangeDates: Date[] = [];
+  bsValue = new Date();
+  bsRangeValue: Date[] = [];
+  maxDate = new Date();
   count: number = 1;
   children: number = 0;
   childrens: any[] = [];
@@ -32,7 +34,10 @@ export class HotelComponent implements OnInit {
   });
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.maxDate.setDate(this.maxDate.getDate() + 7);
+    this.bsRangeValue = [this.bsValue, this.maxDate];
+  }
   oncountersChanged(type: string) {
     type == 'plus' ? this.count++ : this.count--;
     console.log(this.count);
